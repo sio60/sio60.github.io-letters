@@ -14,7 +14,7 @@ class LetterConfig {
   static const String senderName = '유나';
 
   /// 앱 제목.
-  static const String appTitle = '66일의 편지';
+  static const String appTitle = '편지';
 
   /// 1일차 편지가 열리는 날짜 = 재희에게 주는 날.
   /// 이 날짜부터 하루에 한 장씩 자동으로 해금됩니다.
@@ -41,7 +41,7 @@ class LetterConfig {
   // ── 첫 화면(커버) 문구 ──────────────────────────────────────
 
   /// 맨 위 작은 라벨.
-  static const String coverLabel = '66일의 편지';
+  static const String coverLabel = '편지';
 
   /// 큰 글씨 위에 붙는 한 줄.
   static const String coverLead = '유나가';

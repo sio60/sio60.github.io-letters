@@ -1,11 +1,11 @@
 {
-    "name": "66일의 편지",
+    "name": "편지",
     "short_name": "편지",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#FFFFFF",
-    "description": "유나가 쓴 편지",
+    "description": "",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
