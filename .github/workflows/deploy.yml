@@ -30,8 +30,10 @@ jobs:
       # 편지 원고가 바뀌었는데 생성 파일을 커밋 안 했어도 배포본은 항상 최신이 되게 합니다.
       - run: dart run tool/build_letters.dart
 
+      - run: flutter test
+
       # GitHub Pages 는 https://<user>.github.io/<repo>/ 로 서빙되므로 base-href 가 필요합니다.
-      - run: flutter build web --release --base-href /jhjhjhjh/
+      - run: flutter build web --release --base-href /sio60.github.io-letters/
 
       - uses: actions/configure-pages@v5
 

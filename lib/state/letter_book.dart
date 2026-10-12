@@ -11,7 +11,13 @@ const String _readKey = 'read_days';
 
 /// 편지 목록 + 해금 상태 + 읽음 표시를 들고 있는 앱 상태.
 class LetterBook extends ChangeNotifier {
-  LetterBook._(this._prefs, this.letters, this._read, this._now, this._unlockAll) {
+  LetterBook._(
+    this._prefs,
+    this.letters,
+    this._read,
+    this._now,
+    this._unlockAll,
+  ) {
     // 자정을 넘겨 새 편지가 열리는 순간을 놓치지 않기 위한 주기적 확인.
     _ticker = Timer.periodic(const Duration(seconds: 20), (_) {
       final now = unlockedCount;
@@ -24,7 +30,10 @@ class LetterBook extends ChangeNotifier {
   }
 
   /// [clock] 과 [unlockAll] 은 테스트에서 특정 상황을 흉내 낼 때만 넘깁니다.
-  static Future<LetterBook> load({DateTime Function()? clock, bool? unlockAll}) async {
+  static Future<LetterBook> load({
+    DateTime Function()? clock,
+    bool? unlockAll,
+  }) async {
     final prefs = await SharedPreferences.getInstance();
     final saved = prefs.getStringList(_readKey) ?? const <String>[];
     return LetterBook._(
@@ -53,7 +62,9 @@ class LetterBook extends ChangeNotifier {
     final now = _now();
     final today = DateTime(now.year, now.month, now.day);
     final start = LetterConfig.startDate;
-    final elapsed = today.difference(DateTime(start.year, start.month, start.day)).inDays;
+    final elapsed = today
+        .difference(DateTime(start.year, start.month, start.day))
+        .inDays;
     return (elapsed + 1).clamp(0, totalDays);
   }
 
@@ -78,7 +89,8 @@ class LetterBook extends ChangeNotifier {
   int get unreadCount =>
       letters.take(unlockedCount).where((l) => !_read.contains(l.day)).length;
 
-  int get readCount => letters.take(unlockedCount).where((l) => _read.contains(l.day)).length;
+  int get readCount =>
+      letters.take(unlockedCount).where((l) => _read.contains(l.day)).length;
 
   bool isUnlocked(Letter letter) => letter.day <= unlockedCount;
 
@@ -86,7 +98,9 @@ class LetterBook extends ChangeNotifier {
 
   LetterStatus statusOf(Letter letter) {
     if (!isUnlocked(letter)) return LetterStatus.locked;
-    if (_isToday(letter.unlockDate) && !isRead(letter)) return LetterStatus.today;
+    if (_isToday(letter.unlockDate) && !isRead(letter)) {
+      return LetterStatus.today;
+    }
     return isRead(letter) ? LetterStatus.read : LetterStatus.unread;
   }
 
@@ -109,12 +123,18 @@ class LetterBook extends ChangeNotifier {
     final now = _now();
     final today = DateTime(now.year, now.month, now.day);
     final start = LetterConfig.startDate;
-    return DateTime(start.year, start.month, start.day).difference(today).inDays;
+    return DateTime(
+      start.year,
+      start.month,
+      start.day,
+    ).difference(today).inDays;
   }
 
   bool _isToday(DateTime date) {
     final now = _now();
-    return date.year == now.year && date.month == now.month && date.day == now.day;
+    return date.year == now.year &&
+        date.month == now.month &&
+        date.day == now.day;
   }
 
   @override
@@ -126,8 +146,11 @@ class LetterBook extends ChangeNotifier {
 
 /// 위젯 트리 어디서든 LetterBook 을 꺼내 쓰기 위한 스코프.
 class LetterBookScope extends InheritedNotifier<LetterBook> {
-  const LetterBookScope({super.key, required LetterBook book, required super.child})
-      : super(notifier: book);
+  const LetterBookScope({
+    super.key,
+    required LetterBook book,
+    required super.child,
+  }) : super(notifier: book);
 
   static LetterBook of(BuildContext context) {
     final scope = context.dependOnInheritedWidgetOfExactType<LetterBookScope>();

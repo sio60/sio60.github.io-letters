@@ -21,11 +21,15 @@ class LetterConfig {
   /// (2026년 10월 10일 1일차 → 12월 14일 66일차)
   static final DateTime startDate = DateTime(2026, 10, 10);
 
+  /// 첫 편지에 담긴 날. 공개일이나 파일을 작성·수정한 시각과는 별개입니다.
+  /// 편지 아래에는 이 날짜부터 하루씩 이어지는 날짜를 표시합니다.
+  static final DateTime entryStartDate = DateTime(2026, 8, 5);
+
   /// ⚠️ 원고 쓰는 동안 날짜 상관없이 전부 열어두는 스위치.
   ///
   /// 켜져 있으면 앱 위쪽에 검은 띠로 경고가 뜹니다.
   /// **재희에게 주기 전에 반드시 false 로 바꾸세요.**
-  static const bool unlockAllForPreview = true;
+  static const bool unlockAllForPreview = false;
 
   /// 총 편지 수. letters/letters.txt 의 편지 개수와 맞춰주세요.
   /// 66장이면 마지막 편지가 만난 지 365일에 열립니다.
@@ -37,14 +41,14 @@ class LetterConfig {
   // ── 첫 화면(커버) 문구 ──────────────────────────────────────
 
   /// 맨 위 작은 라벨.
-  static const String coverLabel = '1ST ANNIVERSARY';
+  static const String coverLabel = '66일의 편지';
 
   /// 큰 글씨 위에 붙는 한 줄.
-  static const String coverLead = '우리 만난 지';
+  static const String coverLead = '유나가';
 
   /// 표지에서 제일 크게 보이는 문구.
-  static const String coverHeadline = '벌써 1년';
+  static const String coverHeadline = '재희에게';
 
   /// 커버에서 편지 목록으로 넘어가는 버튼.
-  static const String coverAction = '편지 보러 가기';
+  static const String coverAction = '편지 열기';
 }

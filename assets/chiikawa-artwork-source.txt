@@ -1,0 +1,41 @@
+Character artwork: ©nagano
+Source publisher: Talking ODM / ちいかわ みんなデザイン
+Source page: https://odm-shop.talking.design/blogs/news/ck-minnadesign-lp
+Source image: https://cdn.shopify.com/s/files/1/0786/0538/6009/files/260527_odm_ck___lp_02.png?v=1779691853
+Retrieved: 2026-10-12
+
+chiikawa-official-artwork.webp is the original image delivered by the source
+website. The file has not been redrawn, recolored, or modified. The app displays
+the inner Ode 2 region (Ode holding goblins) at the upper right of the main
+letter calendar without an on-screen credit caption. Attribution is retained in
+this source record. Letter reading pages do not display artwork.
+The display window is x=382, y=588, width=156, height=214 in the 1500px source;
+it excludes the surrounding printed circle without changing the character art.
+This is a local design preview. The source is not a redistribution license;
+permission for public hosting or distribution has not been verified.
+
+Peeking calendar faces: original official Chiikawa Market images, ©nagano.
+Source listing: https://chiikawamarket.jp/collections/#character
+chiikawa-face-official.png:
+  https://chiikawamarket.jp/cdn/shop/collections/01chiikawa.png?v=1740649137
+hachiware-face-official.png:
+  https://chiikawamarket.jp/cdn/shop/collections/02hachiware.png?v=1766471495&width=480
+usagi-face-official.png:
+  https://chiikawamarket.jp/cdn/shop/collections/03usagi.png?v=1766471469
+Retrieved: 2026-10-12. All three delivered files are 400 x 400 with alpha.
+Files are unchanged. Flutter clips only the display window so the lower part
+of each face appears behind the date strip. Chiikawa, Hachiware, Usagi, Ode
+and Goblin repeat in that order on unlocked days; locked days keep their lock
+symbol. Release dates and the header artwork have not changed.
+The unused hachiware-face-official.jpg research reference is from:
+  https://nagano-market.jp/cdn/shop/collections/02hachiware.jpg?v=1761282875
+These public source images do not establish permission to redistribute.
+
+Additional peeking faces (2026-10-12):
+ode-face-user.png is an unchanged copy of the user's attached transparent PNG:
+  codex-clipboard-449166e1-8d1f-4845-9d22-65aede548769.png
+  Source dimensions: 1463 x 1434. Original publisher is not verified.
+goblin-face-official.png is an unchanged 400 x 400 transparent original from:
+  https://chiikawamarket.jp/collections/#character
+  https://chiikawamarket.jp/cdn/shop/collections/15goburin.png?v=1766470815&width=480
+Ode and Goblin use the same viewport clipping approach as the other faces.

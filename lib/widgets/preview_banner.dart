@@ -21,18 +21,18 @@ class PreviewBanner extends StatelessWidget {
     return Column(
       children: [
         Material(
-          color: Paper.ink,
+          color: Paper.sealSoft,
           child: SafeArea(
             bottom: false,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 5, 12, 6),
               child: Text(
-                '미리보기 모드 · ${LetterConfig.totalDays}장 전부 열림',
+                '미리보기 · ${LetterConfig.totalDays}장의 편지를 모두 볼 수 있어요',
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                  color: Paper.base,
-                  fontSize: 11,
-                  fontWeight: FontWeight.w700,
+                  color: Paper.inkSoft,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w400,
                   letterSpacing: 0.5,
                 ),
               ),

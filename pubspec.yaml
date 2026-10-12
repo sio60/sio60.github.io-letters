@@ -1,5 +1,5 @@
 name: jhjhjhjh
-description: "65일 동안 하루에 한 장씩 열리는 편지."
+description: "66일 동안 하루에 한 장씩 열리는 편지."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -25,4 +25,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/yuna.png
+    - assets/fonts/
+    - assets/chiikawa-official-artwork.webp
+    - assets/chiikawa-face-official.png
+    - assets/hachiware-face-official.png
+    - assets/usagi-face-official.png
+    - assets/ode-face-user.png
+    - assets/goblin-face-official.png

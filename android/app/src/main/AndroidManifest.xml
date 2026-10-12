@@ -2,7 +2,8 @@
     <application
         android:label="66일의 편지"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/letter_launcher"
+        android:roundIcon="@mipmap/letter_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true"

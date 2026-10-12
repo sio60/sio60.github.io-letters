@@ -10,6 +10,12 @@ class Letter {
   /// 편지 전문. 제목은 따로 두지 않습니다.
   final String body;
 
+  /// 편지에 담긴 날. 실제 작성·수정 시각이나 공개 날짜를 뜻하지 않습니다.
+  DateTime get entryDate {
+    final s = LetterConfig.entryStartDate;
+    return DateTime(s.year, s.month, s.day + (day - 1));
+  }
+
   /// 이 편지가 열리는 날짜 (자정 기준).
   DateTime get unlockDate {
     final s = LetterConfig.startDate;

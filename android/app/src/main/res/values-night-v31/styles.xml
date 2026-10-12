@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowSplashScreenBackground">@color/letter_paper</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/letter_mark</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/letter_paper</item>
+    </style>
+</resources>
