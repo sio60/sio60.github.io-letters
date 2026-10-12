@@ -24,18 +24,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Paper.card,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Paper.card,
-        surfaceTintColor: Colors.transparent,
-        centerTitle: true,
-        title: Text(
-          LetterConfig.appTitle,
-          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-        ),
-      ),
       body: SafeArea(
-        top: false,
         bottom: false,
         child: Center(
           child: ConstrainedBox(

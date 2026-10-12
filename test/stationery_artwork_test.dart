@@ -54,6 +54,8 @@ void main() {
           await tester.pumpWidget(LetterApp(book: book));
           expect(find.byType(HomeScreen), findsOneWidget);
           expect(find.byType(CoverScreen), findsNothing);
+          expect(find.byType(AppBar), findsNothing);
+          expect(find.text(LetterConfig.appTitle), findsNothing);
           expect(find.byKey(const ValueKey('cover-enter')), findsNothing);
           expect(find.text('©nagano'), findsNothing);
           await tester.runAsync(
