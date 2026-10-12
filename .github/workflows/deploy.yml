@@ -35,6 +35,9 @@ jobs:
       # GitHub Pages 는 https://<user>.github.io/<repo>/ 로 서빙되므로 base-href 가 필요합니다.
       - run: flutter build web --release --base-href /sio60.github.io-letters/
 
+      # 이전 앱 파일이 브라우저에 남아도 새 배포의 실행 파일을 불러옵니다.
+      - run: dart run tool/stamp_web_build.dart "${{ github.sha }}"
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
